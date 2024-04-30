@@ -14,6 +14,76 @@
     <!-- Bootstrap + Meyawo main styles -->
     <link rel="stylesheet" href="assets/css/meyawo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #1e549f;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #082650;
+}
+
+/* Style the container/contact section */
+/* .container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+} */
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  /* margin-top: 6px; */
+  padding: 20px;
+  /* margin-left: 100px; */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row2{
+    margin-left: 180px;
+}
+
+.respo{
+    margin-top: 60px;                   
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 90%;
+    margin-top: 0;
+  margin-left: 20px;
+
+  }
+
+ 
+  .row2 {
+    margin-left: 0px;
+  }
+ 
+}       
+ 
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -454,9 +524,34 @@
     <!-- end of blog section -->
 
     <!-- contact section -->
-    <section class="section" id="contact">
+   
+
+    <section class="section" id="contact" style="margin-top: 0; padding-top: 0;">
+        <h1 style="text-align: center;">Contatc Us</h1>
+        <div class="row container row2" >
+            <div class="column respo"   >
+                <img src="./assets/imgs/contact.jpeg" style="width:100%">
+              </div>
+            <div class="column">
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="b0de8626-6a89-4156-8b8f-8cea21207968">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="Name" placeholder="Your name.." required>
+                <label for="lname">Number</label>
+                <input type="text"  name="number" placeholder="Your Number" required>
+                <label for="country">Email</label>
+                <input type="text"  name="Email" placeholder="Your Email ID" required>
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px" required></textarea>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+          </div>
+           
+        </div>
        
-        <section class="contact_us">
+        <!-- <section class="contact_us">
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
@@ -469,7 +564,7 @@
                                             <p>Feel Free to contact us any time. We will get back to you as soon as we can!.</p>
                                             <form action="https://api.web3forms.com/submit" method="POST">
 
-                                                <input type="hidden" name="access_key" value="b0de8626-6a89-4156-8b8f-8cea21207968">
+                                            <input type="hidden" name="access_key" value="b0de8626-6a89-4156-8b8f-8cea21207968">
                                             
                                             <input type="text" class="form-control form-group" name="Name" placeholder="Name" />
                                             <input type="number" class="form-control form-group" name="Contact" placeholder="Contact Number" />
@@ -511,7 +606,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         
         <!-- <section class="map_sec">
             <div class="container">
